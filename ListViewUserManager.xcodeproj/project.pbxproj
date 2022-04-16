@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,11 @@
 		E2354E3B262484100047B057 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2354E3A262484100047B057 /* ContentView.swift */; };
 		E2354E3D262484120047B057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2354E3C262484120047B057 /* Assets.xcassets */; };
 		E2354E40262484120047B057 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2354E3F262484120047B057 /* Preview Assets.xcassets */; };
+		E2354E4A262484330047B057 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2354E49262484330047B057 /* Colors.xcassets */; };
+		E2354E4D2624844E0047B057 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2354E4C2624844E0047B057 /* ColorManager.swift */; };
+		E2354E522625BC2B0047B057 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = E2354E512625BC2B0047B057 /* PopupView */; };
+		E25C3EBD262C69DD00555B05 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C3EBC262C69DD00555B05 /* KeyboardHandler.swift */; };
+		E2D99E9326286178009DF940 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D99E9226286178009DF940 /* UserListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,10 @@
 		E2354E3C262484120047B057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2354E3F262484120047B057 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2354E41262484120047B057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2354E49262484330047B057 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E2354E4C2624844E0047B057 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		E25C3EBC262C69DD00555B05 /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		E2D99E9226286178009DF940 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2354E522625BC2B0047B057 /* PopupView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +62,11 @@
 		E2354E37262484100047B057 /* ListViewUserManager */ = {
 			isa = PBXGroup;
 			children = (
+				E2354E482624841F0047B057 /* Util */,
+				E2D99E912628615C009DF940 /* User */,
 				E2354E38262484100047B057 /* ListViewUserManagerApp.swift */,
 				E2354E3A262484100047B057 /* ContentView.swift */,
+				E2354E49262484330047B057 /* Colors.xcassets */,
 				E2354E3C262484120047B057 /* Assets.xcassets */,
 				E2354E41262484120047B057 /* Info.plist */,
 				E2354E3E262484120047B057 /* Preview Content */,
@@ -67,6 +80,23 @@
 				E2354E3F262484120047B057 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E2354E482624841F0047B057 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E2354E4C2624844E0047B057 /* ColorManager.swift */,
+				E25C3EBC262C69DD00555B05 /* KeyboardHandler.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		E2D99E912628615C009DF940 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E2D99E9226286178009DF940 /* UserListView.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +115,9 @@
 			dependencies = (
 			);
 			name = ListViewUserManager;
+			packageProductDependencies = (
+				E2354E512625BC2B0047B057 /* PopupView */,
+			);
 			productName = ListViewUserManager;
 			productReference = E2354E35262484100047B057 /* ListViewUserManager.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +145,9 @@
 				Base,
 			);
 			mainGroup = E2354E2C262484100047B057;
+			packageReferences = (
+				E2354E502625BC2B0047B057 /* XCRemoteSwiftPackageReference "PopupView" */,
+			);
 			productRefGroup = E2354E36262484100047B057 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2354E4A262484330047B057 /* Colors.xcassets in Resources */,
 				E2354E40262484120047B057 /* Preview Assets.xcassets in Resources */,
 				E2354E3D262484120047B057 /* Assets.xcassets in Resources */,
 			);
@@ -138,8 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25C3EBD262C69DD00555B05 /* KeyboardHandler.swift in Sources */,
+				E2354E4D2624844E0047B057 /* ColorManager.swift in Sources */,
 				E2354E3B262484100047B057 /* ContentView.swift in Sources */,
 				E2354E39262484100047B057 /* ListViewUserManagerApp.swift in Sources */,
+				E2D99E9326286178009DF940 /* UserListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E2354E502625BC2B0047B057 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.12;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E2354E512625BC2B0047B057 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2354E502625BC2B0047B057 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E2354E2D262484100047B057 /* Project object */;
 }
